@@ -1,6 +1,6 @@
 {
   "name": "t-input",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "authors": [
     "Rahul Pilkhwal <rahul.pilkhwal@tavisca.com>",
     "Shailesh Kumar Srivastava <ssrivastava@tavisca.com>",
@@ -38,7 +38,6 @@
     "webcomponentsjs": "^0.7.14",
     "t-autosuggest": "atomelements/t-autosuggest#master",
     "t-calendar": "atomelements/t-calendar#master",
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.6",
-    "t-shared-components": "atomelements/t-shared-components#^1.0.0"
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.6"
   }
 }

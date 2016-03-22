@@ -78,7 +78,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
       position: relative;
       font-family: var(--primary-font-family);
      /* Removing padding to adjust in the current scenairo */
-     /*  padding: 8px 0; */
+     padding: 8px 0;
 
     }
 
@@ -161,7 +161,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
         transition: transform 0.25s, width 0.25s;
         -webkit-transform-origin: left top;
         transform-origin: left top;
-
+        line-height: 28px;
         @apply(--t-font-common-nowrap);
         @apply(--t-font-subhead);
         @apply(--t-input-container-label);
@@ -194,6 +194,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
         -webkit-appearance: none;
         text-align: inherit;
         outline: 0;
+        line-height: 28px;
         @apply(--t-font-subhead);
         @apply(--t-input-container-input);
     }

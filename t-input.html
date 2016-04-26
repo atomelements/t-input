@@ -279,6 +279,7 @@ Polymer({
 	},
 
 	validate: function(){
+		this.value = this.value.trim();
 		return Polymer.dom(this.root).querySelector('#input').validate();
 	}
 });	

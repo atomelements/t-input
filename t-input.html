@@ -279,7 +279,7 @@ Polymer({
 	},
 
 	validate: function(){
-		if (typeof(this.value).toLowerCase() === 'string') {
+		if ((typeof(this.value)).toLowerCase() === 'string') {
 			this.value = this.value.trim();}
 		return Polymer.dom(this.root).querySelector('#input').validate();
 	}

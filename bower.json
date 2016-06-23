@@ -36,8 +36,8 @@
     "t-shared-components": "atomelements/t-shared-components#^1.0.0",
     "web-component-tester": "*",
     "webcomponentsjs": "^0.7.14",
-    "t-autosuggest": "atomelements/t-autosuggest#master",
-    "t-calendar": "atomelements/t-calendar#master",
+    "t-autosuggest": "atomelements/t-autosuggest#^1.0.0",
+    "t-calendar": "atomelements/t-calendar#^1.0.0",
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.6"
   }
 }

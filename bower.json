@@ -38,6 +38,7 @@
     "webcomponentsjs": "^0.7.14",
     "t-autosuggest": "atomelements/t-autosuggest#^1.0.0",
     "t-calendar": "atomelements/t-calendar#^1.0.0",
+    "t-dropdown": "atomelements/t-dropdown#^2.0.0",
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.6"
   }
 }

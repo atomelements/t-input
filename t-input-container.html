@@ -100,8 +100,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
     :host.invalid-input ::content paper-input-error[invalid] {
       visibility: visible;
     }
-    :host.invalid-input .input-content ::content input,
-    :host.invalid-input .input-content ::content .input {
+    :host.invalid-input .input-content  {
       border-color:  var(--error-theme-color,--error-color)!important;
     }
     .underline {
@@ -110,6 +109,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
 
       .floated-label-placeholder {
         @apply(--t-font-caption);
+        line-height: 32px;
       }
 
       .input-content.label-is-hidden ::content label,
@@ -122,11 +122,11 @@ This element is `display:block` by default, but you can set the `inline` attribu
       .unfocused-line {
         @apply(--layout-fit);
 
-        background: var(--form-underline-color, --secondary-text-color);
+        background: transparent;
         height: 1px;
 
       }
-      :host.invalid-input .unfocused-line {
+      /*:host.invalid-input .unfocused-line {
         background: var(--paper-input-container-invalid-color, --error-color);
         -webkit-transform: none;
         transform: none;
@@ -134,18 +134,23 @@ This element is `display:block` by default, but you can set the `inline` attribu
         transition: transform 0.25s;
 
         @apply(--paper-transition-easing);
-      }
+      }*//*
       :host([disabled]) .unfocused-line {
         border-bottom: 1px dashed;
-        border-color: var(--paper-input-container-color, --secondary-text-color);
         background: transparent;
 
+      }*/
+
+      :host([disabled]) .input-content {
+        opacity: 0.6;
+        border-color: var(--input-disabled-color, --secondary-text-color);
       }
       .input-content {
         @apply(--layout-horizontal);
         @apply(--layout-center);
 
         position: relative;
+        border: 1px solid var(--input-border-color, #e8edf3);
       }
 
       .input-content ::content label,
@@ -162,6 +167,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
         -webkit-transform-origin: left top;
         transform-origin: left top;
         line-height: 28px;
+        transform: translateX(10px);
         @apply(--t-font-common-nowrap);
         @apply(--t-font-subhead);
         @apply(--t-input-container-label);
@@ -170,8 +176,8 @@ This element is `display:block` by default, but you can set the `inline` attribu
 
       .input-content.label-is-floating ::content label,
       .input-content.label-is-floating ::content .paper-input-label {
-        -webkit-transform: translateY(-75%) scale(0.75);
-        transform: translateY(-75%) scale(0.75);
+        -webkit-transform: translateY(-100%) scale(0.75);
+        transform: translateY(-100%) scale(0.75);
 
         /* Since we scale to 75/100 of the size, we actually have 100/75 of the
         original space now available */
@@ -185,7 +191,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
     .input-content ::content .paper-input-input {
         position: relative; /* to make a stacking context */
         box-shadow: none;
-        padding: 0;
+        padding: 0 0 0 10px;
         width: 100%;
         max-width: 100%;
         background: transparent;

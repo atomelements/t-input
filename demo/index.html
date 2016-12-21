@@ -12,6 +12,12 @@
     <link rel="import" href="../../t-calendar/t-calendar.html">
     <link rel="import" href="../../t-autosuggest/t-autosuggest.html">
     <link rel="import" href="../../t-dropdown/t-dropdown.html">
+    <style is="custom-style">
+        t-calendar{
+            --input-height:48px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -23,7 +29,7 @@
         <div>2</div>
         <div>3</div>
     </t-dropdown>
-	<t-calendar format="yyyy/mmm/dd" hide-icon always-Float-Label id="one" required label="Select date"></t-calendar>
+	<t-calendar format="yyyy/mm/dd"  always-Float-Label id="one" required label="Select date"></t-calendar>
   <t-autosuggest validate-on-blur="false" required label="Untitled Autosuggest very Bidduds o dsjdlsj" data-url="http://qa-mystiquecode.tavisca.com/api/content/autosuggest/" query-params="cid=nxtb2bsite" token-param="formattedAddress"></t-autosuggest>
 </body>
 

@@ -166,7 +166,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
         transition: transform 0.25s, width 0.25s;
         -webkit-transform-origin: left top;
         transform-origin: left top;
-        line-height: 28px;
+        line-height: var(--input-height,28px);
         transform: translateX(10px);
         @apply(--t-font-common-nowrap);
         @apply(--t-font-subhead);
@@ -200,7 +200,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
         -webkit-appearance: none;
         text-align: inherit;
         outline: 0;
-        line-height: 28px;
+        line-height: var(--input-height,28px);
         @apply(--t-font-subhead);
         @apply(--t-input-container-input);
     }

@@ -1,0 +1,27 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../t-input.html">
+<link rel="import" href="../../t-shared-components/theme.html">
+<!-- <link rel="import" href="../../t-calendar/t-calendar.html">
+<link rel="import" href="../../t-autosuggest/t-autosuggest.html"> -->
+
+<dom-module id="demo-element">
+  <template>
+   <style></style>
+
+  <t-input no-label-float></t-input>
+    <t-input prevent-invalid-input required label="Search city, address, zip or landmark"></t-input>
+    <t-input multi-line label="something"  validate-on-blur required></t-input>
+
+    <!-- TODO:// First move t-calendar and t-autosuggest in hybrid mode and then use them -->
+ <!--  <t-calendar  no-label-float  id="one" required label="Select date"></t-calendar>
+  <t-autosuggest validate-on-blur="false" required label="Untitled Autosuggest very Bidduds o dsjdlsj" data-url="http://qa-mystiquecode.tavisca.com/api/content/autosuggest/" query-params="cid=nxtb2bsite" token-param="formattedAddress"></t-autosuggest> -->
+
+  </template>
+
+  <script>
+    class DemoElement extends Polymer.Element {
+      static get is() { return 'demo-element' }
+    }
+    customElements.define(DemoElement.is, DemoElement);
+  </script>
+</dom-module>

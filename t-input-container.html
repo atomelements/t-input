@@ -70,7 +70,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
 `display:inline-block`.
 -->
 <dom-module id="t-input-container">
-
+<template>
   <style>
 
     :host {
@@ -109,7 +109,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
       }
 
       .floated-label-placeholder {
-        @apply(--t-font-caption);
+        @apply --t-font-caption;
       }
 
       .input-content.label-is-hidden ::content label,
@@ -120,7 +120,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
 
 
       .unfocused-line {
-        @apply(--layout-fit);
+        @apply --layout-fit;
 
         background: var(--form-underline-color, --secondary-text-color);
         height: 1px;
@@ -133,7 +133,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
         -webkit-transition: -webkit-transform 0.25s;
         transition: transform 0.25s;
 
-        @apply(--paper-transition-easing);
+        @apply --paper-transition-easing;
       }
       :host([disabled]) .unfocused-line {
         border-bottom: 1px dashed;
@@ -142,8 +142,8 @@ This element is `display:block` by default, but you can set the `inline` attribu
 
       }
       .input-content {
-        @apply(--layout-horizontal);
-        @apply(--layout-center);
+        @apply --layout-horizontal;
+        @apply --layout-center;
 
         position: relative;
       }
@@ -162,10 +162,10 @@ This element is `display:block` by default, but you can set the `inline` attribu
         -webkit-transform-origin: left top;
         transform-origin: left top;
         line-height: 28px;
-        @apply(--t-font-common-nowrap);
-        @apply(--t-font-subhead);
-        @apply(--t-input-container-label);
-        @apply(--t-form-transition-easing);
+        @apply --t-font-common-nowrap;
+        @apply --t-font-subhead;
+        @apply --t-input-container-label;
+        @apply --t-form-transition-easing;
       }
 
       .input-content.label-is-floating ::content label,
@@ -177,7 +177,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
         original space now available */
         width: 133%;
 
-        @apply(--t-input-container-label-floating);
+        @apply --t-input-container-label-floating;
       }
     
     .input-content ::content input,
@@ -195,8 +195,8 @@ This element is `display:block` by default, but you can set the `inline` attribu
         text-align: inherit;
         outline: 0;
         line-height: 28px;
-        @apply(--t-font-subhead);
-        @apply(--t-input-container-input);
+        @apply --t-font-subhead;
+        @apply --t-input-container-input;
     }
 
   
@@ -210,16 +210,14 @@ This element is `display:block` by default, but you can set the `inline` attribu
       }
 
   </style>
-
-  <template>
     
 
 <template is="dom-if" if="[[!noLabelFloat]]">
       <div class="floated-label-placeholder">&nbsp;</div>
-    </template>
+</template>
 
     <div class$="[[_computeInputContentClass(noLabelFloat,alwaysFloatLabel,focused,invalid,_inputHasContent)]]">
-      <content select=":not([add-on])"></content>
+      <slot name=":not([add-on])"></slot>
     </div>
     
     <div class$="[[_computeUnderlineClass(focused,invalid)]]">
@@ -228,7 +226,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
     </div>
     
     <div class$="[[_computeAddOnContentClass(focused,invalid)]]">
-      <content id="addOnContent" select="[add-on]"></content>
+      <slot id="name" name="[add-on]"></slot>
     </div>
 
   </template>
